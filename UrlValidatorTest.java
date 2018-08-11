@@ -22,24 +22,29 @@ public class UrlValidatorTest extends TestCase {
    public void testFirstPartition()
    {
 	   System.out.print("ALLOW_2_SLASHES:\n");
+	   
+	   String scheme = "https://";
+	   String port = ":555";
+	   String path = "/test/path";
+	   String query = "?query=true&anotherVar=yes";
+	   String baseURL = "www.google.com";
 	   for(int i = 0; i < 210; i++) {
-		   String theURL = "www.google.com";
 		   boolean expected = true;
-		   
+		   String theURL = baseURL;
 		   if(i % 2 == 0) {
-			   theURL = "https://" + theURL;
+			   theURL = scheme + theURL;
 		   }
 			   
 		   if(i % 3 == 0) {
-			   theURL = theURL + ":555";
+			   theURL = theURL + port;
 		   }
 			   
 		   if(i % 5 == 0) {
-			   theURL = theURL + "/test/path";
+			   theURL = theURL + path;
 		   }
 			   
 		   if(i % 7 == 0) {
-			   theURL = theURL + "?query=true&anotherVar=yes";
+			   theURL = theURL + query;
 		   }
 		   
 		   testFirstPartition(theURL, expected);
@@ -49,24 +54,29 @@ public class UrlValidatorTest extends TestCase {
    public void testSecondPartition()
    {
 	   System.out.print("NO_FRAGMENTS:\n");
+	   
+	   String scheme = "https://";
+	   String port = ":555";
+	   String path = "/test/path";
+	   String query = "?query=true&anotherVar=yes";
+	   String baseURL = "www.google.com";
 	   for(int i = 0; i < 210; i++) {
-		   String theURL = "www.google.com";
 		   boolean expected = true;
-		   
+		   String theURL = baseURL;
 		   if(i % 2 == 0) {
-			   theURL = "https://" + theURL;
+			   theURL = scheme + theURL;
 		   }
 			   
 		   if(i % 3 == 0) {
-			   theURL = theURL + ":555";
+			   theURL = theURL + port;
 		   }
 			   
 		   if(i % 5 == 0) {
-			   theURL = theURL + "/test/path";
+			   theURL = theURL + path;
 		   }
 			   
 		   if(i % 7 == 0) {
-			   theURL = theURL + "?query=true&anotherVar=yes";
+			   theURL = theURL + query;
 		   }
 		   
 		   testSecondPartition(theURL, expected);
@@ -76,24 +86,29 @@ public class UrlValidatorTest extends TestCase {
    public void testThirdPartition()
    {
 	   System.out.print("ALLOW_LOCAL_URLS:\n");
+	   
+	   String scheme = "https://";
+	   String port = ":555";
+	   String path = "/test/path";
+	   String query = "?query=true&anotherVar=yes";
+	   String baseURL = "www.google.com";
 	   for(int i = 0; i < 210; i++) {
-		   String theURL = "www.google.com";
 		   boolean expected = true;
-		   
+		   String theURL = baseURL;
 		   if(i % 2 == 0) {
-			   theURL = "https://" + theURL;
+			   theURL = scheme + theURL;
 		   }
 			   
 		   if(i % 3 == 0) {
-			   theURL = theURL + ":555";
+			   theURL = theURL + port;
 		   }
 			   
 		   if(i % 5 == 0) {
-			   theURL = theURL + "/test/path";
+			   theURL = theURL + path;
 		   }
 			   
 		   if(i % 7 == 0) {
-			   theURL = theURL + "?query=true&anotherVar=yes";
+			   theURL = theURL + query;
 		   }
 		   
 		   testThirdPartition(theURL, expected);
@@ -103,24 +118,29 @@ public class UrlValidatorTest extends TestCase {
    public void testFourthPartition()
    {
 	   System.out.print("ALLOW_ALL_SCHEMES:\n");
+	   
+	   String scheme = "https://";
+	   String port = ":555";
+	   String path = "/test/path";
+	   String query = "?query=true&anotherVar=yes";
+	   String baseURL = "www.google.com";
 	   for(int i = 0; i < 210; i++) {
-		   String theURL = "www.google.com";
 		   boolean expected = true;
-		   
+		   String theURL = baseURL;
 		   if(i % 2 == 0) {
-			   theURL = "https://" + theURL;
+			   theURL = scheme + theURL;
 		   }
 			   
 		   if(i % 3 == 0) {
-			   theURL = theURL + ":555";
+			   theURL = theURL + port;
 		   }
 			   
 		   if(i % 5 == 0) {
-			   theURL = theURL + "/test/path";
+			   theURL = theURL + path;
 		   }
 			   
 		   if(i % 7 == 0) {
-			   theURL = theURL + "?query=true&anotherVar=yes";
+			   theURL = theURL + query;
 		   }
 		   
 		   testFourthPartition(theURL, expected);
